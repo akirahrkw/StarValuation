@@ -1,5 +1,7 @@
 Star Valuation provides star scoring system, a library of jquery plugin.
 
+Demo: http://www.akirahrkw.com/SVsample.html
+
 how to use it.
 
 0. Requirement
@@ -66,7 +68,7 @@ $("#main").block(/* change to static star */).unblock(/* change to dynamic star 
 
 please check sample.html if you wannna see concrete example code.
 
-
+Demo: http://www.akirahrkw.com/SVsample.html
 
 author akira hirakawa
 http://www.akirahrkw.com
