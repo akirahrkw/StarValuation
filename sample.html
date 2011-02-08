@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<title>star valuation sample</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<script src="./jquery-1.4.4.js" type="text/javascript"></script>
+<script src="./starvaluation-1.0.0.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function(){
+		var o = null;	
+		SV.init({
+			num : 5,
+			size : 20,
+			hoverCss : "hover",
+			unhoverCss : "unhover",
+			onclick : function(e){ 
+				alert(o.point()); 
+			}
+		});
+		o = $("#main").attach(2);
+		o.block(/* change to static star */).unblock(/* change to dynamic star */);
+		$(".test").attach(3);
+	});
+</script>	
+</head>
+<body>
+	<div id="main"></div>
+	<div id="test1" class="test"></div>
+	<div id="test2" class="test"></div>
+</body>
+</html>

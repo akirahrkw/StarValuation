@@ -1,0 +1,75 @@
+Star Valuation provides star scoring system, a library of jquery plugin.
+
+how to use it.
+
+0. Requirement
+this library requires jQuery.
+this library was developed by jquery-1.4.4.js
+
+1. Initialization
+
+SV.init(options /* array */ );
+but if you don't need to set options, no need to call this method.
+
+this is default options.
+var options = {
+	num: 5, /* the number of star */
+	hoverImg : "./img/star_hover.png",
+	unhoverImg : "./img/star_unhover.png",
+	hoverCss : null,
+	unhoverCss : null,
+	size : 20, /* star size */
+	onclick : null /* call back method*/
+};
+
+if you wanna change the options, call init method like the following.
+SV.init({ num : 20 , size : 10 });
+
+2. Attach
+
+$("#main").attach(2,false);
+if there is a <div id="main"></div>, and you want to set stars in this tag,
+call the attach method.
+
+first argument is initial point.
+second is static option. if true,the stars will be static.
+if no second argument, default setting is dynamic.
+if no first argument, default setting is 0.
+
+you can also use class name. ex: $(".test").attach(2,false);
+but must be required id attribute.
+
+ex:
+	<div id="test1" class="test"></div>
+	<div id="test2" class="test"></div>
+	
+3. Get Point
+
+$("#main").point();
+
+if $(".test").point(); and $(".test").size() >= 2
+this method returns array.
+ex:
+	<div id="test1" class="test"></div>
+	<div id="test2" class="test"></div>
+	
+	var array = $(".test").point();
+	
+	array["test1"];
+	array["test2"];
+
+otherwise , it returns a number.
+
+4. Change to static or to dynamic.
+
+$("#main").block(/* change to static star */).unblock(/* change to dynamic star */);
+
+please check sample.html if you wannna see concrete example code.
+
+
+
+author akira hirakawa
+http://www.akirahrkw.com
+http://twitter.com/chicken_guy
+http://facebook.com/akirahrkw
+ 
